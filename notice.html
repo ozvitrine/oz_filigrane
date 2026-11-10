@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notice d'utilisation – Oz_Filigrane</title>
+<meta name="description" content="Mode d'emploi d'Oz_Filigrane : scanner un document, configurer le filigrane, envoyer en PDF ou JPEG, formules Premium et questions fréquentes.">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="icon" href="data:image/svg+xml,<svg viewBox='0 0 100 100' aria-hidden='true'><rect width='100' height='100' rx='22' fill='%230B1F3A'/><rect x='16' y='8' width='46' height='84' rx='7' fill='%2316325C' stroke='%233D6FB6' stroke-width='2.5'/><rect x='33' y='12' width='12' height='2.5' rx='1.2' fill='%233D6FB6'/><path d='M30 24h36l14 14v46H30z' fill='%23fff'/><path d='M66 24v14h14z' fill='%23D5DCE6'/><g stroke='%23B8C4D6' stroke-width='2.5' stroke-linecap='round'><path d='M37 45h35M37 53h35M37 61h35'/></g><clipPath id='d'><path d='M30 24h36l14 14v46H30z'/></clipPath><g clip-path='url(%23d)' fill='%23C62828' fill-opacity='.35'><rect x='5' y='36' width='100' height='5' transform='rotate(-30 55 54)'/><rect x='5' y='52' width='100' height='5' transform='rotate(-30 55 54)'/><rect x='5' y='68' width='100' height='5' transform='rotate(-30 55 54)'/></g><path d='M66 66a7 7 0 0 1 14 0' fill='none' stroke='%232BB673' stroke-width='4.5'/><rect x='59' y='66' width='28' height='22' rx='4' fill='%232BB673'/><circle cx='73' cy='76' r='2.5' fill='%23fff'/></svg>">
+<style>
+:root{--nuit:#0B1F3A;--nuit2:#16325C;--bleu:#3D6FB6;--vert:#2BB673;--vert-f:#1E8A55;--rouge:#C62828;--or:#F2B705;
+--fond:#F4F6FA;--carte:#FFFFFF;--texte:#18243A;--doux:#5B6B82;--ligne:#DDE3EC;--rose:#FFF4F4}
+@media (prefers-color-scheme:dark){:root{--fond:#0A1424;--carte:#111E33;--texte:#E7ECF4;--doux:#9AA8BD;--ligne:#22324D;--rose:#2A1418;--vert-f:#46CF8C}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif;background:var(--fond);color:var(--texte);line-height:1.6;font-size:16.5px}
+a{color:var(--bleu)}@media (prefers-color-scheme:dark){a{color:#7FA8E6}}
+header.site{background:var(--nuit);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.barre{max-width:1080px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.marque{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;margin-right:auto}
+.marque svg{width:36px;height:36px}
+nav.menu{display:flex;gap:4px;flex-wrap:wrap}
+nav.menu a{color:#C9D4E5;text-decoration:none;padding:7px 12px;border-radius:999px;font-size:.95rem;font-weight:600}
+nav.menu a:hover{background:rgba(255,255,255,.08);color:#fff}
+nav.menu a[aria-current=page]{background:var(--vert);color:#fff}
+@media (max-width:520px){header.site{position:static}.marque{margin-right:0;width:100%}nav.menu a{padding:6px 10px;font-size:.88rem}}
+main{max-width:1080px;margin:0 auto;padding:32px 16px 56px}
+.etroit{max-width:820px;margin:0 auto}
+h1{font-size:clamp(1.8rem,4.5vw,2.6rem);line-height:1.15;margin:.2em 0 .4em}
+h2{font-size:1.45rem;margin:2.2em 0 .6em;color:var(--texte)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+.chapo{font-size:1.12rem;color:var(--doux);max-width:60ch}
+.carte{background:var(--carte);border:1px solid var(--ligne);border-radius:18px;padding:22px}
+.grille{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(43,182,115,.14);color:var(--vert-f);font-size:1.4rem;margin-bottom:10px}
+.carte h3{margin:.1em 0 .35em}.carte p{margin:0;color:var(--doux)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:14px;font-weight:700;text-decoration:none}
+.btn.plein{background:var(--vert);color:#fff}.btn.plein:hover{filter:brightness(1.07)}
+.btn.contour{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.hero{background:linear-gradient(160deg,var(--nuit) 0%,var(--nuit2) 100%);color:#fff;border-radius:26px;padding:clamp(24px,5vw,52px);display:grid;gap:36px;grid-template-columns:1.15fr .85fr;align-items:center}
+.hero .chapo{color:#C9D4E5}.hero h1{color:#fff}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.pastille{display:inline-block;background:rgba(242,183,5,.16);color:var(--or);border:1px solid rgba(242,183,5,.4);padding:4px 12px;border-radius:999px;font-size:.85rem;font-weight:700}
+@media (max-width:760px){.hero{grid-template-columns:1fr}}
+.doc{position:relative;aspect-ratio:85.6/70;max-width:380px;margin:0 auto;width:100%;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.doc .carteid{position:absolute;inset:8% 8% 26% 8%;border-radius:10px;background:linear-gradient(135deg,#E8EEF7,#CFDAEA);display:flex;gap:6%;padding:6%}
+.doc .photo{width:30%;border-radius:6px;background:linear-gradient(#B8C4D6,#9FAFC6)}
+.doc .lignes{flex:1;display:flex;flex-direction:column;gap:9%;padding-top:3%}
+.doc .lignes i{display:block;height:9%;background:#9FAFC6;border-radius:4px}.doc .lignes i:nth-child(2){width:70%}.doc .lignes i:nth-child(4){width:55%}
+.doc .wm{position:absolute;inset:-40%;display:flex;flex-direction:column;justify-content:center;gap:16px;transform:rotate(-30deg);pointer-events:none}
+.doc .wm span{white-space:nowrap;color:rgba(198,40,40,.36);font-weight:800;font-size:.72rem;letter-spacing:.02em}
+.doc .bandeau{position:absolute;left:0;right:0;bottom:0;height:20%;background:#FFF4F4;border-top:3px solid #C62828;color:#B71C1C;font-weight:800;font-size:.62rem;padding:2.5% 4%;line-height:1.3}
+.etapes{counter-reset:e;display:grid;gap:14px}
+.etape{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start}
+.etape::before{counter-increment:e;content:counter(e);width:46px;height:46px;border-radius:50%;background:var(--nuit);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.1rem}
+@media (prefers-color-scheme:dark){.etape::before{background:var(--bleu)}}
+.etape h3{margin:.35em 0 .2em}.etape p{margin:0;color:var(--doux)}
+.encadre{border-left:4px solid var(--vert);background:var(--carte);border-radius:0 14px 14px 0;padding:14px 18px;margin:18px 0}
+.encadre.alerte{border-color:var(--rouge);background:var(--rose)}
+.encadre p{margin:.2em 0}
+.tarifs{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.tarif{text-align:center}.tarif .prix{font-size:2rem;font-weight:800;color:var(--texte)}.tarif .prix small{font-size:.9rem;color:var(--doux);font-weight:600}
+.tarif.vedette{border:2px solid var(--vert)}
+table{width:100%;border-collapse:collapse;background:var(--carte);border-radius:14px;overflow:hidden;border:1px solid var(--ligne);font-size:.95rem}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--ligne);vertical-align:top}
+th{background:rgba(61,111,182,.09);font-weight:700}
+tr:last-child td{border-bottom:0}
+.tableau{overflow-x:auto}
+.sommaire{columns:2;column-gap:28px;padding-left:1.2em}@media (max-width:600px){.sommaire{columns:1}}
+.version{position:relative;padding-left:28px;margin-bottom:26px}
+.version::before{content:"";position:absolute;left:7px;top:12px;bottom:-26px;width:2px;background:var(--ligne)}
+.version::after{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--vert);box-shadow:0 0 0 4px var(--fond)}
+.version:last-child::before{display:none}
+.version .entete{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.version h2{margin:0;font-size:1.3rem}
+.date{color:var(--doux);font-size:.92rem}
+.tag{display:inline-block;font-size:.75rem;font-weight:800;padding:2px 9px;border-radius:999px;margin-right:6px;vertical-align:1px}
+.tag.n{background:rgba(43,182,115,.15);color:var(--vert-f)}.tag.a{background:rgba(61,111,182,.15);color:var(--bleu)}.tag.c{background:rgba(198,40,40,.12);color:var(--rouge)}
+@media (prefers-color-scheme:dark){.tag.a{color:#7FA8E6}.tag.c{color:#FF8A80}}
+.version ul{margin:.6em 0 0;padding-left:1.2em}.version li{margin:.25em 0}
+footer.site{border-top:1px solid var(--ligne);color:var(--doux);font-size:.9rem}
+footer .barre{justify-content:space-between;padding:22px 16px}
+footer a{color:var(--doux)}
+.maj{color:var(--doux);font-size:.92rem}
+</style>
+</head>
+<body>
+<header class="site"><div class="barre">
+<a class="marque" href="index.html"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#0B1F3A"/><rect x="16" y="8" width="46" height="84" rx="7" fill="#16325C" stroke="#3D6FB6" stroke-width="2.5"/><rect x="33" y="12" width="12" height="2.5" rx="1.2" fill="#3D6FB6"/><path d="M30 24h36l14 14v46H30z" fill="#fff"/><path d="M66 24v14h14z" fill="#D5DCE6"/><g stroke="#B8C4D6" stroke-width="2.5" stroke-linecap="round"><path d="M37 45h35M37 53h35M37 61h35"/></g><clipPath id="d"><path d="M30 24h36l14 14v46H30z"/></clipPath><g clip-path="url(#d)" fill="#C62828" fill-opacity=".35"><rect x="5" y="36" width="100" height="5" transform="rotate(-30 55 54)"/><rect x="5" y="52" width="100" height="5" transform="rotate(-30 55 54)"/><rect x="5" y="68" width="100" height="5" transform="rotate(-30 55 54)"/></g><path d="M66 66a7 7 0 0 1 14 0" fill="none" stroke="#2BB673" stroke-width="4.5"/><rect x="59" y="66" width="28" height="22" rx="4" fill="#2BB673"/><circle cx="73" cy="76" r="2.5" fill="#fff"/></svg><span>Oz_Filigrane</span></a>
+<nav class="menu" aria-label="Menu principal"><a href="index.html">Accueil</a><a href="notice.html" aria-current="page">Notice</a><a href="evolutions.html">Évolutions</a><a href="confidentialite.html">Confidentialité</a></nav>
+</div></header>
+<main>
+
+<div class="etroit">
+<h1>Notice d'utilisation</h1>
+<p class="chapo">Tout ce qu'il faut savoir pour protéger un document avec Oz_Filigrane, du scan à l'envoi.</p>
+
+<div class="carte" style="margin-top:22px">
+<strong>Sommaire</strong>
+<ol class="sommaire">
+<li><a href="#installer">Installer l'application</a></li>
+<li><a href="#premier">Premier lancement</a></li>
+<li><a href="#scanner">Scanner un document</a></li>
+<li><a href="#importer">Importer une image</a></li>
+<li><a href="#configurer">Configurer le filigrane</a></li>
+<li><a href="#envoyer">Prévisualiser et envoyer</a></li>
+<li><a href="#effacement">Ce qui est effacé, et quand</a></li>
+<li><a href="#premium">Formules Premium</a></li>
+<li><a href="#reglages">Réglages</a></li>
+<li><a href="#conseils">Conseils</a></li>
+<li><a href="#faq">Questions fréquentes</a></li>
+</ol>
+</div>
+
+<h2 id="installer">1. Installer l'application</h2>
+<p>Oz_Filigrane est disponible pour Android sur Google Play. Elle fonctionne sur la plupart des téléphones Android récents. Une connexion internet n'est utile que pour les publicités, les achats et le tout premier scan (téléchargement du module de numérisation par Google Play) : le filigranage lui-même fonctionne hors ligne.</p>
+
+<h2 id="premier">2. Premier lancement</h2>
+<p>À la première ouverture, un formulaire vous demande vos choix concernant les publicités personnalisées (obligation européenne, RGPD). Votre réponse n'a aucun effet sur les fonctions de l'application ; vous pouvez la modifier plus tard dans les <a href="#reglages">Réglages</a>.</p>
+<p>En version gratuite, une courte publicité peut s'afficher à l'ouverture.</p>
+
+<h2 id="scanner">3. Scanner un document</h2>
+<div class="etapes">
+<div class="etape"><div><h3>Touchez « Scanner le document »</h3><p>Le scanner s'ouvre avec l'appareil photo.</p></div></div>
+<div class="etape"><div><h3>Visez le document</h3><p>Posez-le à plat, bien éclairé. Les bords sont détectés automatiquement et la photo peut être prise toute seule.</p></div></div>
+<div class="etape"><div><h3>Ajustez si besoin</h3><p>Déplacez les coins pour affiner le cadrage, faites pivoter, puis validez. La perspective est redressée automatiquement.</p></div></div>
+</div>
+<div class="encadre"><p><strong>Confidentialité :</strong> la photo du scan est traitée en mémoire. Elle n'est <strong>jamais enregistrée dans votre galerie</strong>.</p></div>
+<p>Si le module de numérisation de Google n'est pas disponible sur votre téléphone, l'application utilise automatiquement sa propre caméra : placez le document dans le cadre vert (format « Carte / permis » ou « Feuille A4 ») et prenez la photo.</p>
+
+<h2 id="importer">4. Importer une image existante</h2>
+<p>Touchez <strong>« Choisir une image »</strong> pour utiliser une photo déjà présente sur le téléphone. Un écran d'ajustement s'ouvre : les bords du document sont détectés quand c'est possible, et vous pouvez déplacer les coins à la main. Les boutons <em>Auto</em> et <em>Tout</em> remettent respectivement la détection automatique ou l'image entière.</p>
+<div class="encadre"><p>L'application travaille sur une copie : <strong>votre image d'origine n'est jamais modifiée ni supprimée</strong>.</p></div>
+
+<h2 id="configurer">5. Configurer le filigrane</h2>
+<h3>Destinataire / démarche</h3>
+<p>Indiquez à qui est destiné le document ou pour quelle démarche : « Agence Durand – dossier de location », « Banque X – ouverture de compte »… Soyez précis : plus le destinataire est clairement identifié, moins la copie est réutilisable ailleurs.</p>
+<h3>Valable jusqu'au</h3>
+<p>Choisissez une date de fin dans le calendrier. Elle signale qu'au-delà, le document ne doit plus être utilisé.</p>
+<h3>Le texte apposé</h3>
+<div class="encadre alerte"><p>DOCUMENT PROTÉGÉ – Destiné exclusivement à <em>[destinataire]</em>. Valable jusqu'au <em>[JJ/MM/AAAA]</em>. Copie et usage tiers interdits.</p></div>
+<p>Ce texte est répété en diagonale sur toute la surface du document, en rouge semi-transparent, et repris en entier dans un bandeau lisible sous le document. L'aperçu du texte s'affiche en direct pendant la saisie.</p>
+<p>Touchez ensuite <strong>« Générer le document »</strong>.</p>
+
+<h2 id="envoyer">6. Prévisualiser et envoyer</h2>
+<p>L'aperçu montre le document filigrané ; écartez deux doigts pour zoomer et vérifier les détails.</p>
+<div class="tableau"><table>
+<tr><th>Choix</th><th>Usage</th></tr>
+<tr><td><strong>PDF sécurisé</strong></td><td>Format conseillé pour les dossiers administratifs : une page A4 contenant le document.</td></tr>
+<tr><td><strong>Image JPEG</strong></td><td>Pratique pour les messageries ou les formulaires qui n'acceptent que des images.</td></tr>
+<tr><td><strong>Envoyer / Partager</strong></td><td>Ouvre le partage d'Android : e-mail, WhatsApp, Messages, Drive…</td></tr>
+<tr><td><strong>Enregistrer sur le téléphone</strong></td><td>Vous choisissez le dossier de destination.</td></tr>
+</table></div>
+<p>En version gratuite, une courte publicité s'affiche juste avant l'envoi ou l'enregistrement. Touchez <strong>« Terminer »</strong> quand vous avez fini.</p>
+
+<h2 id="effacement">7. Ce qui est effacé, et quand</h2>
+<div class="tableau"><table>
+<tr><th>Élément</th><th>Devenir</th></tr>
+<tr><td>Photo du scan</td><td>Jamais dans la galerie. Effacée de la mémoire après l'envoi ou l'enregistrement, sur « Terminer » ou à la fermeture de l'application.</td></tr>
+<tr><td>Image importée de la galerie</td><td>L'original reste intact dans votre galerie. La copie de travail est effacée de la mémoire.</td></tr>
+<tr><td>Fichier filigrané</td><td>Seul fichier qui sort de l'application, vers la destination que vous choisissez. La copie temporaire servant au partage est supprimée sur « Terminer » et à chaque démarrage.</td></tr>
+<tr><td>Destinataire et date</td><td>Non conservés, sauf si vous mémorisez un destinataire (Premium).</td></tr>
+</table></div>
+<p>Par sécurité, les captures d'écran sont bloquées dans l'application.</p>
+
+<h2 id="premium">8. Formules Premium</h2>
+<p>Touchez l'icône <strong>couronne</strong> en haut à droite de l'écran d'accueil.</p>
+<div class="tableau"><table>
+<tr><th>Formule</th><th>Prix</th><th>Détails</th></tr>
+<tr><td>Pass Mensuel</td><td>3 € / mois</td><td>Sans engagement, résiliable à tout moment.</td></tr>
+<tr><td>Abonnement Annuel</td><td>20 € / an</td><td>La formule la plus avantageuse pour un usage régulier.</td></tr>
+<tr><td>Licence à vie</td><td>40 € une fois</td><td>Liée à votre compte Google, récupérable sur un nouveau téléphone.</td></tr>
+</table></div>
+<p><strong>Premium apporte :</strong> zéro publicité (ni bannière, ni pub à l'ouverture, ni avant l'envoi), des exports en haute définition et la mémorisation des destinataires fréquents (icône signet dans le champ destinataire).</p>
+<p>Sans renouvellement de l'abonnement, l'application repasse automatiquement en version gratuite avec publicités : toutes les fonctions de base restent disponibles.</p>
+<p><strong>Changement de téléphone :</strong> Réglages &gt; <em>Restaurer mes achats</em>, avec le même compte Google.</p>
+
+<h2 id="reglages">9. Réglages</h2>
+<p>Accessibles par la roue dentée en haut à gauche :</p>
+<ul>
+<li><strong>Abonnement</strong> : formule actuelle, restaurer mes achats, gérer ou résilier mon abonnement (Google Play).</li>
+<li><strong>Choix publicitaires (RGPD)</strong> : modifier votre consentement.</li>
+<li><strong>Effacer les destinataires mémorisés</strong>.</li>
+<li><strong>Mentions légales &amp; confidentialité</strong>.</li>
+</ul>
+
+<h2 id="conseils">10. Conseils pour bien protéger un document</h2>
+<ul>
+<li>Un filigrane <strong>par destinataire</strong> : ne réutilisez pas le même document pour deux démarches.</li>
+<li>Choisissez une <strong>date de fin courte</strong>, adaptée à la durée de la démarche.</li>
+<li>Vérifiez dans l'aperçu que les informations utiles (nom, photo, numéro) restent lisibles pour le destinataire.</li>
+<li>Pour un recto-verso, scannez et filigranez chaque face.</li>
+<li>Le filigrane dissuade et trace l'usage prévu du document ; il ne remplace pas la vigilance : n'envoyez vos papiers qu'à des interlocuteurs de confiance.</li>
+</ul>
+
+<h2 id="faq">11. Questions fréquentes</h2>
+<h3>Mes documents sont-ils envoyés sur un serveur ?</h3>
+<p>Non. Tout le traitement a lieu sur votre téléphone. L'éditeur ne reçoit et ne stocke aucun document. Voir la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+<h3>Le filigrane peut-il être retiré ?</h3>
+<p>Il est fondu dans l'image et répété sur toute la surface : le retirer sans abîmer le document est très difficile, et toute retouche se voit.</p>
+<h3>Pourquoi ne puis-je pas faire de capture d'écran ?</h3>
+<p>C'est volontaire : cela évite qu'une image du document non filigrané se retrouve dans votre galerie.</p>
+<h3>Le scanner ne s'ouvre pas.</h3>
+<p>Il nécessite les services Google Play et, la première fois, une connexion internet pour télécharger le module de numérisation. À défaut, l'application bascule sur sa caméra intégrée.</p>
+<h3>J'ai payé mais je vois encore des publicités.</h3>
+<p>Ouvrez Réglages &gt; <em>Restaurer mes achats</em> avec le compte Google utilisé pour l'achat. Si le problème persiste, écrivez à <a href="mailto:ozvitrine@gmail.com">ozvitrine@gmail.com</a>.</p>
+<h3>Comment résilier mon abonnement ?</h3>
+<p>Réglages &gt; <em>Gérer / résilier mon abonnement</em>, ou directement dans Google Play &gt; Paiements et abonnements.</p>
+</div>
+
+</main>
+<footer class="site"><div class="barre">
+<span>© 2026 Oz-WEB · Oz_Filigrane</span>
+<span><a href="confidentialite.html">Confidentialité</a> · <a href="mailto:ozvitrine@gmail.com">Contact</a></span>
+</div></footer>
+</body>
+</html>
